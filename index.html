@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precious's Restaurant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for the chat messages */
+        .chat-messages::-webkit-scrollbar {
+            width: 8px;
+        }
+        .chat-messages::-webkit-scrollbar-track {
+            background: #e0f2f7; /* Light blue track */
+            border-radius: 10px;
+        }
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #90caf9; /* Medium blue thumb */
+            border-radius: 10px;
+        }
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #64b5f6; /* Darker blue on hover */
+        }
+        /* Custom font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-800 text-gray-100 min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <header class="bg-blue-900 p-4 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-white mb-2 md:mb-0">Precious's Restaurant</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="text-white hover:text-blue-200 transition duration-300">About</a></li>
+                    <li><a href="#menu" class="text-white hover:text-blue-200 transition duration-300">Our Menu</a></li>
+                    <li><a href="#contact" class="text-white hover:text-blue-200 transition duration-300">Contact</a></li>
+                    <li><a href="#chatbot" class="text-white hover:text-blue-200 transition duration-300">Chatbot</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto p-6 flex-grow grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Restaurant Content (Left & Center Columns on Large Screens) -->
+        <div class="lg:col-span-2 space-y-8">
+            <!-- About Section -->
+            <section id="about" class="bg-blue-700 p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold mb-4 text-white">About Precious's Restaurant</h2>
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                    <img src="image/Gemini_Generated_Image_ocl71cocl71cocl7 (2).png" alt="Precious's Restaurant Logo" class="rounded-full border-4 border-blue-300 shadow-md w-24 h-24 md:w-36 md:h-36 object-cover">
+                    <p class="text-lg text-blue-100 leading-relaxed text-center md:text-left">
+                        Welcome to Precious's Restaurant, where culinary passion meets exquisite flavors! We are dedicated to providing a unique dining experience with a focus on fresh, locally sourced ingredients and innovative dishes. Our menu is crafted to delight your senses and leave you with unforgettable memories. Come and savor the taste of excellence!
+                    </p>
+                </div>
+            </section>
+
+            <!-- Our Menu Section -->
+            <section id="menu" class="bg-blue-700 p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold mb-4 text-white">Our Menu</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-blue-600 p-5 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-medium mb-2 text-white">Signature Traditional Meals</h3>
+                        <p class="text-blue-100 mb-3">Eru complimented with water fufu and garri.</p>
+                        <span class="inline-block bg-blue-800 text-white px-4 py-2 rounded-md">Price: 3000Frs</span>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="bg-blue-600 p-5 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-medium mb-2 text-white">Carnivore Options </h3>
+                        <p class="text-blue-100 mb-3">Juicy prime beef patty, meat source, achu etc.</p>
+                        <span class="inline-block bg-blue-800 text-white px-4 py-2 rounded-md">Price: 3500Frs</span>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="bg-blue-600 p-5 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-medium mb-2 text-white">Vegetarian Delights</h3>
+                        <p class="text-blue-100 mb-3">Salads both fruits and vegetables.</p>
+                        <span class="inline-block bg-blue-800 text-white px-4 py-2 rounded-md">Price: 2000Frs</span>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div class="bg-blue-600 p-5 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-medium mb-2 text-white">Natural drinks</h3>
+                        <p class="text-blue-100 mb-3">smoothies, fruit juice.</p>
+                        <span class="inline-block bg-blue-800 text-white px-4 py-2 rounded-md">Price: 1500Frs</span>
+                    </div>
+                    <!-- Add more menu items as needed -->
+                </div>
+            </section>
+            <!--Your HTML Content here-->
+            <footer>
+                <a href="https://github.com/Promise-ctrl/precious-restaurant.git"> view on Github</a>
+            </footer>
+
+            <!-- Contact Section -->
+            <section id="contact" class="bg-blue-700 p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold mb-4 text-white">Reservations & Inquiries</h2>
+                <p class="text-lg text-blue-100 mb-4">Planning a visit or have a question? We'd love to hear from you!</p>
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-blue-100 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-blue-100" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-blue-100 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-blue-100" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-blue-100 text-sm font-bold mb-2">Subject (e.g., Reservation, Catering)</label>
+                        <input type="text" id="subject" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-blue-100" placeholder="Reservation for 2">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-blue-100 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" rows="5" class="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-blue-100" placeholder="Your message or reservation details..."></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-900 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline transition duration-300">Send Message</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- AI Chatbot (Right Column on Large Screens) -->
+        <aside id="chatbot" class="lg:col-span-1 bg-blue-700 p-6 rounded-lg shadow-xl flex flex-col max-h-[80vh]">
+            <h2 class="text-2xl font-semibold mb-4 text-white">AI Chatbot</h2>
+            <div id="chat-messages" class="chat-messages flex-grow overflow-y-auto p-3 bg-blue-600 rounded-lg mb-4 space-y-3">
+                <!-- Chat messages will be appended here -->
+                <div class="flex justify-start">
+                    <div class="bg-blue-800 text-white p-3 rounded-lg max-w-[80%] shadow-md">
+                        Hello! I'm Precious's Restaurant assistant. How can I help you with your dining experience today?
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <input type="text" id="chat-input" class="flex-grow shadow appearance-none border rounded-l-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-blue-100" placeholder="Ask me about the menu, reservations, or anything else...">
+                <button id="send-button" class="bg-blue-900 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-r-md focus:outline-none focus:shadow-outline transition duration-300">Send</button>
+            </div>
+            <div id="loading-indicator" class="hidden text-center mt-2 text-blue-200">
+                <div class="animate-spin inline-block w-6 h-6 border-4 border-t-4 border-blue-200 border-opacity-75 rounded-full"></div>
+                Thinking...
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-900 p-4 text-center text-white mt-8 shadow-inner">
+        <p>&copy; 2025 Precious's Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const chatInput = document.getElementById('chat-input');
+        const sendButton = document.getElementById('send-button');
+        const chatMessages = document.getElementById('chat-messages');
+        const loadingIndicator = document.getElementById('loading-indicator');
+
+        // Function to append a message to the chat
+        function appendMessage(sender, message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('flex', sender === 'user' ? 'justify-end' : 'justify-start');
+            messageDiv.innerHTML = `
+                <div class="${sender === 'user' ? 'bg-blue-500 text-white' : 'bg-blue-800 text-white'} p-3 rounded-lg max-w-[80%] shadow-md">
+                    ${message}
+                </div>
+            `;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+        }
+
+        // Function to send message to the AI
+        async function sendMessageToAI(prompt) {
+            loadingIndicator.classList.remove('hidden'); // Show loading indicator
+            sendButton.disabled = true; // Disable send button
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Canvas will automatically provide this in runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    appendMessage('ai', text);
+                } else {
+                    appendMessage('ai', 'Sorry, I could not get a response from the AI.');
+                    console.error('Unexpected API response structure:', result);
+                }
+            } catch (error) {
+                appendMessage('ai', 'There was an error connecting to the AI. Please try again.');
+                console.error('Error fetching from Gemini API:', error);
+            } finally {
+                loadingIndicator.classList.add('hidden'); // Hide loading indicator
+                sendButton.disabled = false; // Enable send button
+            }
+        }
+
+        // Event listener for send button click
+        sendButton.addEventListener('click', () => {
+            const userMessage = chatInput.value.trim();
+            if (userMessage) {
+                appendMessage('user', userMessage);
+                sendMessageToAI(userMessage);
+                chatInput.value = ''; // Clear input
+            }
+        });
+
+        // Event listener for Enter key press in the input field
+        chatInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                sendButton.click(); // Trigger the send button click
+            }
+        });
+    </script>
+</body>
+</html>
